@@ -3,12 +3,12 @@
     <header></header>
     <div class="center">
       <div class="photo"></div>
-      <list ref="list1"></list>
+      <list ref="list1" @changeclass="changeclass"></list>
     </div>
     <footer>
       <div>设计</div>
       <div class="button">
-        <span :calss="{circle:isCircle}">X</span>
+        <span :class="{circle:isCircle}" @click="appear">X</span>
       </div>
       <div>编程</div>
     </footer>
@@ -21,7 +21,7 @@ import list from './components/list'
 export default {
   data(){
     return {
-      isCircle:false
+      isCircle:true
     }
   },
   components:{
@@ -31,7 +31,14 @@ export default {
   methods:{
     click(){
       this.$refs.list1.all()
-    }
+    },
+    changeclass(boo){
+      this.isCircle = boo;
+      console.log(this.isCircle)
+    },
+    appear(){
+      //添加appear
+    },
   }
 
 }
@@ -76,7 +83,7 @@ export default {
     background-color: greenyellow;
     color: white;
   }
-  footer span{
+  footer span.circle{
     border-radius: 50%
   }
   footer div{

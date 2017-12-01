@@ -26,7 +26,7 @@
         <i>&gt</i>
       </li>
       <li class="li-list btn">btnStyle
-        <input type="checkbox" class="toggle">
+        <input type="checkbox" class="toggle" v-model="checked" @click="check()">
         </li>
     </ul>
   </div>
@@ -53,7 +53,8 @@ export default {
       type:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
       number:[{id:0,value:'2'},{id:1,value:'3'},{id:2,value:'4'}],
       mask:[{id:0,value:'无'},{id:1,value:'white'},{id:2,value:'black'}],
-      animate:[{id:0,value:'无'},{id:1,value:'animated rubberBand'},{id:2,value:'animated jello'},{id:3,value:'animated flash'},{id:2,value:'animated jello'},{id:2,value:'animated bounce'}]
+      animate:[{id:0,value:'无'},{id:1,value:'animated rubberBand'},{id:2,value:'animated jello'},{id:3,value:'animated flash'},{id:2,value:'animated jello'},{id:2,value:'animated bounce'}],
+      checked:true
     }
   },
   methods:{
@@ -103,6 +104,9 @@ export default {
       this.animatetext = text;
       this.all()
     },
+    check(){
+      this.$emit('changeclass',!this.checked);
+    }
   }
 }
 
