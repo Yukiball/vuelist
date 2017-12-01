@@ -4,21 +4,24 @@
       <li class="li-list type" @click="typeclick()">
         <span>type</span> 
         <span class="text typetext">{{ typetext }}</span>
-        <vtext></vtext>
+        <vtext :row="type" v-show="typeshow"></vtext>
         <i>&gt</i>
       </li>
       <li class="li-list number" @click="numberclick()">
         <span>number</span> 
         <span class="text numbertext">{{ numbertext }}</span>
+        <vtext :row="number" v-show="numbershow"></vtext>
         <i>&gt</i>
       </li>
       <li class="li-list mask" @click="maskclick()">
         <span>mask</span> 
+        <vtext :row="mask" v-show="maskshow"></vtext>
         <span class="text masktext">{{ masktext }}</span>
         <i>&gt</i>
       </li>
       <li class="li-list animate" @click="animateclick()">
         <span>animate</span>
+        <vtext class="anima" :row="animate" v-show="animateshow"></vtext>
         <span class="text animatetext">{{ animatetext }}</span>
         <i>&gt</i>
       </li>
@@ -38,25 +41,45 @@ export default {
   },
   data(){
     return{
-      typetext:"typetext",
-      numbertext:"numbertext",
-      masktext:"masktext",
-      animatetext:"animatetext",
-      list:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}]
+      typetext:"middle-around",
+      numbertext:"4",
+      masktext:"无",
+      animatetext:"无",
+      list:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
+      typeshow:'',
+      numbershow:'',
+      maskshow:'',
+      animateshow:'',
+      type:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
+      number:[{id:0,value:'2'},{id:1,value:'3'},{id:2,value:'4'}],
+      mask:[{id:0,value:'无'},{id:1,value:'white'},{id:2,value:'black'}],
+      animate:[{id:0,value:'无'},{id:1,value:'animated rubberBand'},{id:2,value:'animated jello'},{id:3,value:'animated flash'},{id:2,value:'animated jello'},{id:2,value:'animated bounce'}]
     }
   },
   methods:{
     typeclick(){
-
+      this.typeshow = true;
+      this.numbershow = false;
+      this.maskshow = false;
+      this.animateshow = false;
     },
     numberclick(){
-
+      this.typeshow = false;
+      this.numbershow = true;
+      this.maskshow = false;
+      this.animateshow = false;
     },
     maskclick(){
-
+      this.typeshow = false;
+      this.numbershow = false;
+      this.maskshow = true;
+      this.animateshow = false;
     },
     animateclick(){
-
+      this.typeshow = false;
+      this.numbershow = false;
+      this.maskshow = false;
+      this.animateshow = true;
     }
   }
 }
@@ -66,5 +89,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import url('../assets/css/list.css');
-
+  .anima{
+    position:absolute;
+    bottom:5rem;
+  }
 </style>

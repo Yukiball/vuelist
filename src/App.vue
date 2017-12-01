@@ -30,12 +30,12 @@ export default {
 
 <style>
   @import url('./assets/css/html.css');
-  @import url('./assets/css/list.css');
   #app{
     height: 100%;
     width: auto;
     margin: 0 auto;
     background-color: #eee;
+    position: relative;
   }
   header{
     height: 2rem;
@@ -73,5 +73,8 @@ export default {
     line-height: 3rem;
     flex: 1;
     float: left;
+  }
+  footer:hover{
+    cursor: pointer;
   }
 </style>

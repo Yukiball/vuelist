@@ -1,7 +1,7 @@
 <template>
   <div class="vtext">
      <ul>
-       <li v-for="item in list" :key="item.id">{{item.value}}</li>
+       <li v-for="item in row" :key="item.id">{{item.value}}</li>
      </ul>
   </div>
 </template>
@@ -11,7 +11,12 @@ export default {
   name:'vtext',
   data(){
     return{
-      list:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}]
+    }
+  },
+  props:{
+    row:{
+      type:Array,
+      required: true
     }
   },
   methods:{
