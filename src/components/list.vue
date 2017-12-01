@@ -1,32 +1,32 @@
 <template>
   <div class="list">
      <ul class="listbox">
-      <li class="li-list type" @click="typeclick()">
+      <li class="li-list type" @click.stop="typeclick()">
         <span>type</span> 
-        <span class="text typetext">{{ typetext }}</span>
-        <vtext :row="type" v-show="typeshow"></vtext>
+        <span class="text typetext" >{{ typetext }}</span>
+        <vtext @changetext="changetypetext" :row="type" v-show="typeshow"></vtext>
         <i>&gt</i>
       </li>
-      <li class="li-list number" @click="numberclick()">
+      <li class="li-list number" @click.stop="numberclick()">
         <span>number</span> 
         <span class="text numbertext">{{ numbertext }}</span>
-        <vtext :row="number" v-show="numbershow"></vtext>
+        <vtext @changetext="changenumbertext" :row="number" v-show="numbershow"></vtext>
         <i>&gt</i>
       </li>
-      <li class="li-list mask" @click="maskclick()">
+      <li class="li-list mask" @click.stop="maskclick()">
         <span>mask</span> 
-        <vtext :row="mask" v-show="maskshow"></vtext>
+        <vtext @changetext="changemasktext" :row="mask" v-show="maskshow"></vtext>
         <span class="text masktext">{{ masktext }}</span>
         <i>&gt</i>
       </li>
-      <li class="li-list animate" @click="animateclick()">
+      <li class="li-list animate" @click.stop="animateclick()">
         <span>animate</span>
-        <vtext class="anima" :row="animate" v-show="animateshow"></vtext>
+        <vtext @changetext="changeanimatetext" class="anima" :row="animate" v-show="animateshow"></vtext>
         <span class="text animatetext">{{ animatetext }}</span>
         <i>&gt</i>
       </li>
-      <li class="li-list btn">btn
-        <input type="checkbox" class="toggle" >
+      <li class="li-list btn">btnStyle
+        <input type="checkbox" class="toggle">
         </li>
     </ul>
   </div>
@@ -57,6 +57,12 @@ export default {
     }
   },
   methods:{
+    all(){
+      this.typeshow = false;
+      this.numbershow = false;
+      this.maskshow = false;
+      this.animateshow = false;
+    },
     typeclick(){
       this.typeshow = true;
       this.numbershow = false;
@@ -80,7 +86,23 @@ export default {
       this.numbershow = false;
       this.maskshow = false;
       this.animateshow = true;
-    }
+    },
+    changetypetext(text){
+      this.typetext = text;
+      this.all()
+    },
+    changenumbertext(text){
+      this.numbertext = text;
+      this.all()
+    },
+    changemasktext(text){
+      this.masktext = text;
+      this.all()
+    },
+    changeanimatetext(text){
+      this.animatetext = text;
+      this.all()
+    },
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="vtext">
      <ul>
-       <li v-for="item in row" :key="item.id">{{item.value}}</li>
+       <li @click.stop="click(item.value)" v-for="item in row" :key="item.id">{{item.value}}</li>
      </ul>
   </div>
 </template>
@@ -20,7 +20,9 @@ export default {
     }
   },
   methods:{
-    
+    click(text){
+      this.$emit('changetext',text)
+    }
   }
 }
 

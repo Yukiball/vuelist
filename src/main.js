@@ -10,7 +10,6 @@ Vue.config.productionTip = false
 var html = document.getElementsByTagName('html')[0]; 
 var w = document.documentElement.clientWidth || document.body.clientWidth;
 html.style.fontSize = w / 90 + "px"; 
-console.log(html.style.fontSize = w / 90 + "px")
 new Vue({
   el: '#app',
   router,

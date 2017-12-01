@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
+  <div id="app" @click="click()">
     <header></header>
     <div class="center">
       <div class="photo"></div>
-      <list></list>
+      <list ref="list1"></list>
     </div>
     <footer>
       <div>设计</div>
       <div class="button">
-        <span>X</span>
+        <span :calss="{circle:isCircle}">X</span>
       </div>
       <div>编程</div>
     </footer>
@@ -19,11 +19,20 @@
 <script>
 import list from './components/list'
 export default {
+  data(){
+    return {
+      isCircle:false
+    }
+  },
   components:{
     list,
   },
   name: 'app',
-
+  methods:{
+    click(){
+      this.$refs.list1.all()
+    }
+  }
 
 }
 </script>
@@ -39,7 +48,8 @@ export default {
   }
   header{
     height: 2rem;
-    width: auto;
+    width: 100%;
+    z-index: 888;
     background-color: black;
   }
   .photo{
@@ -54,7 +64,7 @@ export default {
     background-color: white;
     display: flex;
     width: 100%;
-    position: absolute;
+    position: fixed;
     height: 3rem;
     bottom:0rem;
   }
@@ -63,9 +73,11 @@ export default {
     height: 3rem;
     width: 3rem;
     font-size: 2rem;
-    border-radius: 50%;
     background-color: greenyellow;
     color: white;
+  }
+  footer span{
+    border-radius: 50%
   }
   footer div{
     text-align: center;
