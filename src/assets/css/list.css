@@ -1,0 +1,41 @@
+.list .listbox{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 1rem;
+  list-style:none;
+  border: 1px solid gray;
+  height: 25rem;
+  width: 30rem;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+}
+.list li.li-list{
+  height: 5rem;
+  margin-left: 1rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid gray;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+.list li.btn{    
+  border-bottom: none;
+}
+.list li span,.list li i{
+  font-size: 2rem;
+}
+.list li span.text{
+  position: absolute;
+  right: 3rem;
+}
+.list li i{
+  margin-right: 1rem;
+  color: gray;
+  float: right;
+}
+.list li .toggle{
+  float: right;
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem 2rem 0 0;
+}
