@@ -41,17 +41,17 @@ export default {
   },
   data(){
     return{
-      typetext:"middle-around",
-      numbertext:"4",
-      masktext:"无",
-      animatetext:"无",
+      typetext:"",
+      numbertext:"",
+      masktext:"",
+      animatetext:"",
       list:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
-      typeshow:'',
-      numbershow:'',
-      maskshow:'',
-      animateshow:'',
+      typeshow: false,
+      numbershow: false,
+      maskshow: false,
+      animateshow: false,
       type:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
-      number:[{id:0,value:'2'},{id:1,value:'3'},{id:2,value:'4'}],
+      number:[{id:0,value:'2'},{id:2,value:'4'}],
       mask:[{id:0,value:'无'},{id:1,value:'white'},{id:2,value:'black'}],
       animate:[{id:0,value:'无'},{id:1,value:'animated rubberBand'},{id:2,value:'animated jello'},{id:3,value:'animated flash'},{id:2,value:'animated jello'},{id:2,value:'animated bounce'}],
       checked:true
@@ -65,42 +65,46 @@ export default {
       this.animateshow = false;
     },
     typeclick(){
-      this.typeshow = true;
+      this.typeshow = !this.typeshow;
       this.numbershow = false;
       this.maskshow = false;
       this.animateshow = false;
     },
     numberclick(){
       this.typeshow = false;
-      this.numbershow = true;
+      this.numbershow = !this.numbershow;
       this.maskshow = false;
       this.animateshow = false;
     },
     maskclick(){
       this.typeshow = false;
       this.numbershow = false;
-      this.maskshow = true;
+      this.maskshow = !this.maskshow;
       this.animateshow = false;
     },
     animateclick(){
       this.typeshow = false;
       this.numbershow = false;
       this.maskshow = false;
-      this.animateshow = true;
+      this.animateshow = !this.animateshow;
     },
     changetypetext(text){
+      this.$store.commit('changetext',text)
       this.typetext = text;
       this.all()
     },
     changenumbertext(text){
+      this.$store.commit('changenumber',text)
       this.numbertext = text;
       this.all()
     },
     changemasktext(text){
+      this.$store.commit('changemask',text)
       this.masktext = text;
       this.all()
     },
     changeanimatetext(text){
+      this.$store.commit('changeanima',text)
       this.animatetext = text;
       this.all()
     },

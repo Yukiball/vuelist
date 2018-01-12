@@ -23,6 +23,9 @@ export default {
     click(text){
       this.$emit('changetext',text)
     }
+  },
+  watch:{
+    
   }
 }
 
