@@ -50,10 +50,10 @@ export default {
       numbershow: false,
       maskshow: false,
       animateshow: false,
-      type:[{id:0,value:'middle-around'},{id:1,value:'middle'},{id:2,value:'left'},{id:3,value:'right'}],
+      type:[{id:0,value:'middle'},{id:1,value:'middle-around'},{id:2,value:'left'},{id:3,value:'right'}],
       number:[{id:0,value:'2'},{id:2,value:'4'}],
       mask:[{id:0,value:'无'},{id:1,value:'white'},{id:2,value:'black'}],
-      animate:[{id:0,value:'无'},{id:1,value:'animated rubberBand'},{id:2,value:'animated jello'},{id:3,value:'animated flash'},{id:2,value:'animated jello'},{id:2,value:'animated bounce'}],
+      animate:[{id:0,value:'无'},{id:1,value:'animated flip'},{id:2,value:'animated fade'},{id:3,value:'animated flash'},{id:4,value:'animated bounce'}],
       checked:true
     }
   },
@@ -89,12 +89,12 @@ export default {
       this.animateshow = !this.animateshow;
     },
     changetypetext(text){
-      this.$store.commit('changetext',text)
+      this.$store.commit('changetype',text)
       this.typetext = text;
       this.all()
     },
     changenumbertext(text){
-      this.$store.commit('changenumber',text)
+      this.$store.commit('changenumber',text);
       this.numbertext = text;
       this.all()
     },

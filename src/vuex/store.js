@@ -10,10 +10,12 @@ const store = new Vuex.Store({
 	    numbertext:"",
 	    masktext:"",
 	    animatetext:"",
+	    t1:'',
+	    t2:'',
 	},
 	mutations: {
 	    changetype (state,val) {
-	      state.typetext = val
+	      	state.typetext = val
 	    },
 	    changenumber (state,val) {
 	    	state.numbertext = val
@@ -23,8 +25,14 @@ const store = new Vuex.Store({
 	    },
 	    changeanima (state,val) {
 	    	state.animatetext = val
-	    }
-	 }
+	    },
+	    changet1 (state,val) {
+	    	state.t1 = val
+	    },
+	    changet2 (state,val) {
+	    	state.t2 = val
+	    },
+	 } 
 })
 
 export default store

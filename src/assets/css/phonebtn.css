@@ -1,0 +1,105 @@
+@media only screen and (max-width: 414px ) {
+  .vbtn div.middle:nth-of-type(1){
+    left: -4rem;
+  }
+  .vbtn div.middle:nth-of-type(2){
+    left: 7.5rem;
+  }
+  .vbtn div.middle:nth-of-type(3){
+    right: 7.5rem;
+  }
+  .vbtn div.middle:nth-of-type(4){
+    right: -4rem;
+  }
+  .vbtn div.middle2:nth-of-type(1){
+    left: 0rem;
+  }
+  .vbtn div.middle2:nth-of-type(2){
+    right:0rem;
+  }
+  .vbtn div.middleAround:nth-of-type(1){
+    left: -3rem;
+  }
+  .vbtn div.middleAround:nth-of-type(2){
+    left: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(3){
+    right: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(4){
+    right: -3rem;
+  }
+  .vbtn div.left:nth-of-type(1){
+   left: 3.5rem;
+  }
+  .vbtn div.left:nth-of-type(2){
+    left: 7rem;
+  }
+  .vbtn div.left:nth-of-type(3){
+    left: 10.5rem;
+  }
+  .vbtn div.left:nth-of-type(4){
+    left: 14rem;
+  }
+  .vbtn div.left2:nth-of-type(1){
+   left: 3.5rem;
+  }
+  .vbtn div.left2:nth-of-type(2){
+    left: 7rem;
+  }
+  .vbtn div.right:nth-of-type(1){
+    right: 3.5rem;
+  }
+  .vbtn div.right:nth-of-type(2){
+    right: 7rem;
+  }
+  .vbtn div.right:nth-of-type(3){
+    right: 10.5rem;
+  }
+  .vbtn div.right:nth-of-type(4){
+    right: 14rem;
+  }
+    .vbtn div.right2:nth-of-type(1){
+    right: 3.5rem;
+  }
+  .vbtn div.right2:nth-of-type(2){
+    right: 7rem;
+  }
+}
+@media only screen and (min-width: 414px ) and (max-width: 768px ){
+
+  .vbtn div.middle:nth-of-type(1){
+    left: -4rem;
+  }
+  .vbtn div.middle:nth-of-type(2){
+    left: 9.5rem;
+  }
+  .vbtn div.middle:nth-of-type(3){
+    right: 9.5rem;
+  }
+  .vbtn div.middle:nth-of-type(4){
+    right: -4rem;
+  }
+  .vbtn div.middle2:nth-of-type(1){
+    left: -1rem;
+  }
+  .vbtn div.middle2:nth-of-type(2){
+    right:-1rem;
+  }
+  .vbtn div.middleAround:nth-of-type(1){
+    left: -3rem;
+  }
+  .vbtn div.middleAround:nth-of-type(2){
+    left: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(3){
+    right: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(4){
+    right: -3rem;
+  }
+}
