@@ -1,11 +1,63 @@
-  .vbtn{
-    position: absolute;
-    top:0;
+  .vbtn div.mask{
+    height: 100%;
     width: 100%;
+    position: absolute;
+  }
+  .vbtn div.white{
+    top: 0;
+    opacity: 0.7;
+    background-color: white;
+    z-index: 999
+  }
+  .vbtn div.black{
+    top: 0;
+    opacity: 0.7;
+    background-color: black;
+    z-index: 999
+  }
+  span.btnfather{
+    z-index: 9999;
+    position: absolute;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    bottom:5px;
+    background-color: greenyellow;
+    color: white;
+  }
+  span.isCircle{
+    border-radius: 50%
+  }
+  span.middle{
+    left: 50%;
+    margin-left: -1.5rem;
+  }
+  span.left{
+    left: 50%;
+    margin-left: 12.5rem;
+  }
+  span.right{
+    left: 50%;
+    margin-left: -15.5rem;
+  }
+  span.circle{
+    border-radius: 50%
+  }
+  .vbtn{
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  .vbtn:hover{
+    cursor: pointer;
   }
   .vbtn div{
     position: absolute;
-    z-index: 9999
+    height: 3rem;
+    width: 3rem;
+    z-index: 999
   }
   .vbtn div span{
     display: inline-block;
@@ -14,71 +66,132 @@
     border-radius: 50%;
     font-size: 2rem;
   }
-   .vbtn div.middle:nth-of-type(1){
-    left: 1rem;
-  }
-  .vbtn div.middle:nth-of-type(2){
-    left: 6.5rem;
+   .vbtn div.middle:nth-of-type(2){
+    bottom:5px;
+    left: 50%;
+    margin-left: -11.5rem;
   }
   .vbtn div.middle:nth-of-type(3){
-    right:6.5rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -6.5rem;
   }
   .vbtn div.middle:nth-of-type(4){
-    right:1rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: 3.5rem;
   }
-   .vbtn div.middle2:nth-of-type(1){
-    left: 3rem;
+  .vbtn div.middle:nth-of-type(5){
+    bottom:5px;
+    left: 50%;
+    margin-left: 8.5rem;
   }
-  .vbtn div.middle2:nth-of-type(2){
-    right:3rem;
+   .vbtn div.middle2:nth-of-type(2){
+    bottom:5px;
+    left: 50%;
+    margin-left: -6.5rem;
+    
   }
-  .vbtn div.middleAround:nth-of-type(1){
-    left: 3rem;
+  .vbtn div.middle2:nth-of-type(3){
+    bottom:5px;
+    left: 50%;
+    margin-left: 3.5rem;
   }
   .vbtn div.middleAround:nth-of-type(2){
-    left: 7rem;
-    top:-5rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -9.5rem;
+
   }
   .vbtn div.middleAround:nth-of-type(3){
-    right: 7rem;
-    top:-5rem;
+    bottom:5rem;
+    left: 50%;
+    margin-left: -5.5rem;
   }
   .vbtn div.middleAround:nth-of-type(4){
-    right: 3rem;
+    bottom:5rem;
+    left: 50%;
+    margin-left:3rem;
   }
-  .vbtn div.left:nth-of-type(1){
-   left: 5rem;
+  .vbtn div.middleAround:nth-of-type(5){
+    bottom:5px;
+    left: 50%;
+    margin-left: 7rem;
   }
   .vbtn div.left:nth-of-type(2){
-    left: 10rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: 8rem;
   }
   .vbtn div.left:nth-of-type(3){
-    left: 15rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: 3.5rem;
   }
   .vbtn div.left:nth-of-type(4){
-    left: 20rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -1rem;
   }
-  .vbtn div.left2:nth-of-type(1){
-   left: 5rem;
+  .vbtn div.left:nth-of-type(5){
+    bottom:5px;
+    left: 50%;
+    margin-left: -5.5rem;
   }
   .vbtn div.left2:nth-of-type(2){
-    left: 10rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: 8rem;
   }
-  .vbtn div.right:nth-of-type(1){
-    right: 5rem;
+  .vbtn div.left2:nth-of-type(3){
+    bottom:5px;
+    left: 50%;
+    margin-left: 3.5rem;
   }
   .vbtn div.right:nth-of-type(2){
-    right: 10rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -11rem;
   }
   .vbtn div.right:nth-of-type(3){
-    right: 15rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -6.5rem;
   }
   .vbtn div.right:nth-of-type(4){
-    right: 20rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -2rem;
   }
-  .vbtn div.right2:nth-of-type(1){
-    right: 5rem;
+  .vbtn div.right:nth-of-type(5){
+    bottom:5px;
+    left: 50%;
+    margin-left: 2.5rem;
   }
   .vbtn div.right2:nth-of-type(2){
-    right: 10rem;
+    bottom:5px;
+    left: 50%;
+    margin-left: -11rem;
+  }
+  .vbtn div.right2:nth-of-type(3){
+    bottom:5px;
+    left: 50%;
+    margin-left: -6.5rem;
+  }
+  .bounce-enter-active {
+    animation: bounce-in .5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-in .5s reverse;
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }

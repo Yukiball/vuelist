@@ -1,99 +1,74 @@
 <template>
   <div id="app" @click="click()">
-    <header></header>
+    <vbtn ref="vbtn" :type="type" :number="number" :mask="mask" :animate="animate" :btnStyle="btnStyle"></vbtn> 
     <div class="center">
       <div class="photo"></div>
-      <list ref="list1" @changeclass="changeclass"></list>
-      <div ref="mask" v-show="mask" class="mask" :class="{white:white,black:black}" @click="maskclick()"></div>
+      <list ref="list1"></list>
     </div>
     <footer>
       <div class="class">设计</div>
-      <div class="button class">
-        <span class="btnfather" :class="btnfather" @click="appear()">X</span>
-        <vbtn ref="vbtn" :ok="ok"></vbtn>  
-      </div>
+      <div class="button class"></div>
       <div class="class">编程</div>
     </footer>
-    
   </div>
 </template>
 
 <script>
-import vbtn from './components/vbtn';
 import list from './components/list';
+import vbtn from './components/vbtn.components.js';
 export default {
+  name: 'app',
   data(){
     return {
-      ok:false,
-      mask:false,
-      white:false,
-      black:false,
-      btnfather:{
-        isCircle:true,
-        left:false,
-        right:false,
-        middle:true,
-      }
+      type:'',
+      number:'',
+      mask:'',
+      animate:'',
+      btnStyle:''
     }
   },
   components:{
     list,
     vbtn,
   },
-  name: 'app',
   methods:{
     click(){
       this.$refs.list1.all()
     },
-    changeclass(boo){
-      this.btnfather.isCircle = boo;
-    },
-    appear(){
-      var that = this;  
-      this.ok = !this.ok;
-      this.mask = !this.mask;
-      if (that.$store.state.masktext !== ''||that.$store.state.masktext !== '无') {
-        that.white = that.$store.state.masktext === 'white' ? true : false;
-        that.black = that.$store.state.masktext === 'black' ? true : false;
-      }
-    },
-    maskclick(){
-      var that = this
-      setTimeout(function(){
-        if (that.$refs.mask.getAttribute('class') !== 'mask') {
-          that.ok = !that.ok;
-          that.mask = !that.mask;
-        }
-      },0)
-    }
   },
   computed: {  
-    listenstore() {  
-      return this.$store.state.typetext;  
-    }  
+    listentype(){ return this.$store.state.typetext} ,
+    listennumber(){ return this.$store.state.numbertext} ,
+    listenmask(){ return this.$store.state.masktext} ,
+    listenanimate(){ return this.$store.state.animatetext} ,
+    listenbtnStyle(){ return this.$store.state.class} ,
+
   },
   watch:{
-    listenstore:function(newVal,oldVal){
-      if(newVal == 'left'){
-        this.btnfather.left = true;
-        this.btnfather.right = false;
-        this.btnfather.middle = false;
-      }else if(newVal == 'right'){
-        this.btnfather.left = false;
-        this.btnfather.right = true;
-        this.btnfather.middle = false;
-      }else{
-        this.btnfather.left = false;
-        this.btnfather.right = false;
-        this.btnfather.middle = true;
-      }
-    }
+    listentype(newVal,oldVal){
+      this.type = newVal;
+    },
+    listennumber(newVal,oldVal){
+      this.number = newVal
+    },
+    listenmask(newVal,oldVal){
+      this.mask = newVal;
+
+    },
+    listenanimate(newVal,oldVal){
+      this.animate = newVal;
+    },
+    listenbtnStyle(newVal,oldVal){
+      this.btnStyle = newVal;
+    },
   }
 }
 </script>
 
 <style>
   @import url('./assets/css/html.css');
+  @import url('./assets/css/vbtn.css');
+  @import url('./assets/css/phonebtn.css');
   #app{
     height: 100%;
     width: auto;
@@ -129,39 +104,13 @@ export default {
     display: flex;
     width: 100%;
     position: fixed;
-    height: 3rem;
+    height: 4rem;
     bottom:0rem;
   }
-  footer span.btnfather{
-    z-index: 999;
-    position: absolute;
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    font-size: 2rem;
-    background-color: greenyellow;
-    color: white;
-  }
-  footer span.isCircle{
-    border-radius: 50%
-  }
-  footer span.middle{
-    left: 50%;
-    margin-left: -1.5rem;
-  }
-  footer span.left{
-    left:0;
-  }
-  footer span.right{
-    right: 0;
-  }
-  footer span.circle{
-    border-radius: 50%
-  }
-  footer div.class{
+  div.class{
     text-align: center;
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 4rem;
     flex: 1;
   }
   footer:hover{
@@ -169,20 +118,5 @@ export default {
   }
   .button{
     position: relative;
-  }
-  div.mask{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-  div.white{
-    top: 0;
-    opacity: 0.7;
-    background-color: white;
-  }
-  div.black{
-    opacity: 0.7;
-    top: 0;
-    background-color: black;
   }
 </style>

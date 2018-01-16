@@ -109,7 +109,7 @@ export default {
       this.all()
     },
     check(){
-      this.$emit('changeclass',!this.checked);
+      this.$store.commit('changeclass',!this.checked)
     }
   }
 }

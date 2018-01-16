@@ -1,34 +1,33 @@
-<template>
-  <div class="vbtn" >
-    <div ref="mask" v-show="ok" class="mask" :class="{white:white,black:black}" @click="maskclick()"></div>
-    <span class="btnfather" :class="btnfather" @click="appear()"><slot name="button"></slot></span>
-    <transition name="custom-classes-transition"
-    :enter-active-class="enter"
-    :leave-active-class="leave">
-      <div :class="classObject" v-if="ok"><span style="background-color:blue;"><slot name="item1"></slot></span></div>
-    </transition>
-    <transition name="custom-classes-transition"
-    :enter-active-class="enter"
-    :leave-active-class="leave">
-      <div :class="classObject" v-if="ok && show" ><span style="background-color:pink"><slot name="item2"></slot></span></div>
-    </transition>
-    <transition name="custom-classes-transition"
-    :enter-active-class="enter"
-    :leave-active-class="leave">
-      <div :class="classObject" v-if="ok && show" ><span style="background-color:yellow"><slot name="item3"></slot></span></div>
-    </transition>
-    <transition name="custom-classes-transition"
-    :enter-active-class="enter"
-    :leave-active-class="leave">
-      <div :class="classObject" v-if="ok"><span style="background-color:black"><slot name="item4"></slot></span></div>
-    </transition>
-  </div>
-</template>
+import Vue from 'vue';
 
-<script>
-export default {
-  name:'vbtn',
-  data(){
+var vm = Vue.component('vbtn',{
+	template:`
+		<div class="vbtn" >
+		    <div ref="mask" v-show="ok" class="mask" :class="{white:white,black:black}" @click="maskclick()"></div>
+		    <span class="btnfather" :class="btnfather" @click="appear()"><slot name="button"></slot></span>
+		    <transition name="custom-classes-transition"
+		    :enter-active-class="enter"
+		    :leave-active-class="leave">
+		        <div :class="classObject" v-if="ok"><span style="background-color:blue;"><slot name="item1"></slot></span></div>
+		    </transition>
+		    <transition name="custom-classes-transition"
+		    :enter-active-class="enter"
+		    :leave-active-class="leave">
+		        <div :class="classObject" v-if="ok && show" ><span style="background-color:pink"><slot name="item2"></slot></span></div>
+		    </transition>
+		    <transition name="custom-classes-transition"
+		    :enter-active-class="enter"
+		    :leave-active-class="leave">
+		        <div :class="classObject" v-if="ok && show" ><span style="background-color:yellow"><slot name="item3"></slot></span></div>
+		    </transition>
+		    <transition name="custom-classes-transition"
+		    :enter-active-class="enter"
+		    :leave-active-class="leave">
+		        <div :class="classObject" v-if="ok"><span style="background-color:black"><slot name="item4"></slot></span></div>
+		    </transition>
+		</div>
+	`,
+	data(){
     return{
       white:false,
       black:false,
@@ -212,12 +211,6 @@ export default {
   mounted(){
 
   }
-}
+})
 
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  @import url('../assets/css/vbtn.css');
-  @import url('../assets/css/phonebtn.css');
-</style>
+export default vm
