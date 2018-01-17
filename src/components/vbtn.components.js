@@ -8,22 +8,22 @@ var vm = Vue.component('vbtn',{
 		    <transition name="custom-classes-transition"
 		    :enter-active-class="enter"
 		    :leave-active-class="leave">
-		        <div :class="classObject" v-if="ok"><span style="background-color:blue;"><slot name="item1"></slot></span></div>
+		        <div :class="classObject" v-if="ok"><span style="background-color:pink;"><slot name="item1"></slot></span></div>
 		    </transition>
 		    <transition name="custom-classes-transition"
 		    :enter-active-class="enter"
 		    :leave-active-class="leave">
-		        <div :class="classObject" v-if="ok && show" ><span style="background-color:pink"><slot name="item2"></slot></span></div>
+		        <div :class="classObject" v-if="ok && show" ><span style="background-color:blue"><slot name="item2"></slot></span></div>
 		    </transition>
 		    <transition name="custom-classes-transition"
 		    :enter-active-class="enter"
 		    :leave-active-class="leave">
-		        <div :class="classObject" v-if="ok && show" ><span style="background-color:yellow"><slot name="item3"></slot></span></div>
+		        <div :class="classObject" v-if="ok && show" ><span style="background-color:black"><slot name="item3"></slot></span></div>
 		    </transition>
 		    <transition name="custom-classes-transition"
 		    :enter-active-class="enter"
 		    :leave-active-class="leave">
-		        <div :class="classObject" v-if="ok"><span style="background-color:black"><slot name="item4"></slot></span></div>
+		        <div :class="classObject" v-if="ok"><span style="background-color:yellow"><slot name="item4"></slot></span></div>
 		    </transition>
 		</div>
 	`,

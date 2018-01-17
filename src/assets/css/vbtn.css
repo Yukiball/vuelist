@@ -2,18 +2,19 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    z-index: 9 !important;
   }
   .vbtn div.white{
     top: 0;
     opacity: 0.7;
     background-color: white;
-    z-index: 999
+    z-index: 999 !important
   }
   .vbtn div.black{
     top: 0;
     opacity: 0.7;
     background-color: black;
-    z-index: 999
+    z-index: 999 !important
   }
   span.btnfather{
     z-index: 9999;
@@ -53,8 +54,10 @@
   .vbtn:hover{
     cursor: pointer;
   }
-  .vbtn div{
+  .vbtn > div.middle,div.middle2,div.middleAround,div.left,div.left2,div.right,div.right2{
     position: absolute;
+    bottom:5px;
+    left: 50%;
     height: 3rem;
     width: 3rem;
     z-index: 999
@@ -66,118 +69,87 @@
     border-radius: 50%;
     font-size: 2rem;
   }
-   .vbtn div.middle:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+   .vbtn .middle:nth-of-type(3){
     margin-left: -11.5rem;
   }
-  .vbtn div.middle:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middle:nth-of-type(2){
     margin-left: -6.5rem;
   }
-  .vbtn div.middle:nth-of-type(4){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middle:nth-of-type(5){
     margin-left: 3.5rem;
   }
-  .vbtn div.middle:nth-of-type(5){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middle:nth-of-type(4){
     margin-left: 8.5rem;
   }
-   .vbtn div.middle2:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+   .vbtn .middle2:nth-of-type(2){
     margin-left: -6.5rem;
     
   }
-  .vbtn div.middle2:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middle2:nth-of-type(3){
     margin-left: 3.5rem;
   }
-  .vbtn div.middleAround:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middle2:nth-of-type(5){
+    margin-left: 3.5rem;
+  }
+  .vbtn .middleAround:nth-of-type(2){
     margin-left: -9.5rem;
 
   }
-  .vbtn div.middleAround:nth-of-type(3){
+  .vbtn .middleAround:nth-of-type(3){
     bottom:5rem;
-    left: 50%;
     margin-left: -5.5rem;
   }
-  .vbtn div.middleAround:nth-of-type(4){
+  .vbtn .middleAround:nth-of-type(4){
     bottom:5rem;
-    left: 50%;
     margin-left:3rem;
   }
-  .vbtn div.middleAround:nth-of-type(5){
-    bottom:5px;
-    left: 50%;
+  .vbtn .middleAround:nth-of-type(5){
     margin-left: 7rem;
   }
-  .vbtn div.left:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left:nth-of-type(2){
     margin-left: 8rem;
   }
-  .vbtn div.left:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left:nth-of-type(5){
     margin-left: 3.5rem;
   }
-  .vbtn div.left:nth-of-type(4){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left:nth-of-type(4){
     margin-left: -1rem;
   }
-  .vbtn div.left:nth-of-type(5){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left:nth-of-type(3){
     margin-left: -5.5rem;
   }
-  .vbtn div.left2:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left2:nth-of-type(2){
     margin-left: 8rem;
   }
-  .vbtn div.left2:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left2:nth-of-type(3){
     margin-left: 3.5rem;
   }
-  .vbtn div.right:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+  .vbtn .left2:nth-of-type(5){
+    margin-left: 3.5rem;
+  }
+  .vbtn .right:nth-of-type(2){
     margin-left: -11rem;
   }
-  .vbtn div.right:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .right:nth-of-type(5){
     margin-left: -6.5rem;
   }
-  .vbtn div.right:nth-of-type(4){
-    bottom:5px;
-    left: 50%;
+  .vbtn .right:nth-of-type(4){
     margin-left: -2rem;
   }
-  .vbtn div.right:nth-of-type(5){
-    bottom:5px;
-    left: 50%;
+  .vbtn .right:nth-of-type(3){
     margin-left: 2.5rem;
   }
-  .vbtn div.right2:nth-of-type(2){
-    bottom:5px;
-    left: 50%;
+  .vbtn .right2:nth-of-type(2){
     margin-left: -11rem;
   }
-  .vbtn div.right2:nth-of-type(3){
-    bottom:5px;
-    left: 50%;
+  .vbtn .right2:nth-of-type(3){
     margin-left: -6.5rem;
   }
+  .vbtn .right2:nth-of-type(5){
+    margin-left: -6.5rem;
+  }
+
+/*一个animate*/
   .bounce-enter-active {
     animation: bounce-in .5s;
   }
@@ -195,3 +167,121 @@
       transform: scale(1);
     }
   }
+
+
+/*phone样式*/
+  @media only screen and (max-width: 414px ) {
+  .vbtn div.middle:nth-of-type(3){
+    left: 15.5rem;
+  }
+  .vbtn div.middle:nth-of-type(2){
+    left: 15.5rem;
+  }
+  .vbtn div.middle:nth-of-type(5){
+    right: 7.5rem;
+  }
+  .vbtn div.middle:nth-of-type(4){
+    right: -4rem;
+  }
+  .vbtn div.middle2:nth-of-type(2){
+    left: 15.5rem;
+  }
+  .vbtn div.middle2:nth-of-type(3){
+    right:0rem;
+  }
+  .vbtn div.middle2:nth-of-type(5){
+    right:0rem;
+  }
+  .vbtn div.middleAround:nth-of-type(2){
+    left: 15.5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(3){
+    left: 15.5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(4){
+    right: 0rem;
+  }
+  .vbtn div.middleAround:nth-of-type(5){
+    right: 7.5rem;
+  }
+  .vbtn div.left:nth-of-type(2){
+   left: 16rem;
+  }
+  .vbtn div.left:nth-of-type(5){
+    left: 16rem;
+  }
+  .vbtn div.left:nth-of-type(4){
+    left: 16rem;
+  }
+  .vbtn div.left:nth-of-type(3){
+    left: 16rem;
+  }
+  .vbtn div.left2:nth-of-type(2){
+   left: 16rem;
+  }
+  .vbtn div.left2:nth-of-type(3){
+    left: 16rem;
+  }
+  .vbtn div.left2:nth-of-type(5){
+    left: 16rem;
+  }
+  .vbtn div.right:nth-of-type(2){
+    right: 0rem;
+  }
+  .vbtn div.right:nth-of-type(5){
+    right: 7rem;
+  }
+  .vbtn div.right:nth-of-type(4){
+    right: 10.5rem;
+  }
+  .vbtn div.right:nth-of-type(3){
+    right: 14rem;
+  }
+  .vbtn div.right2:nth-of-type(2){
+    right: 0rem;
+  }
+  .vbtn div.right2:nth-of-type(3){
+    right: 5rem;
+  }
+  .vbtn div.right2:nth-of-type(5){
+    right: 5rem;
+  }
+}
+@media only screen and (min-width: 414px ) and (max-width: 768px ){
+
+  .vbtn div.middle:nth-of-type(3){
+    left: -4rem;
+  }
+  .vbtn div.middle:nth-of-type(2){
+    left: 9.5rem;
+  }
+  .vbtn div.middle:nth-of-type(5){
+    right: 9.5rem;
+  }
+  .vbtn div.middle:nth-of-type(4){
+    right: -4rem;
+  }
+  .vbtn div.middle2:nth-of-type(2){
+    left: -1rem;
+  }
+  .vbtn div.middle2:nth-of-type(3){
+    right:-1rem;
+  }
+  .vbtn div.middle2:nth-of-type(5){
+    right:-1rem;
+  }
+  .vbtn div.middleAround:nth-of-type(2){
+    left: -3rem;
+  }
+  .vbtn div.middleAround:nth-of-type(3){
+    left: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(4){
+    right: 0rem;
+    top:-5rem;
+  }
+  .vbtn div.middleAround:nth-of-type(5){
+    right: -3rem;
+  }
+}
