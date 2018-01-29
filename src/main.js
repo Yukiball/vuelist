@@ -10,12 +10,15 @@ Vue.config.productionTip = false
 var html = document.getElementsByTagName('html')[0]; 
 var w = document.documentElement.clientWidth || document.body.clientWidth;
 console.log(w)
-if (w<800) {
+if (w<=800) {
 	html.style.fontSize = w / 40 + "px";
-}else if(w>1500){
-	html.style.fontSize = w / 100 + "px"; 
+}else if(w>=1500){
+	html.style.fontSize = w / 120 + "px"; 
+}else if(w>=1200 && w<=1500){
+  html.style.fontSize = w / 90 + "px"; 
 }else{
 	html.style.fontSize = w / 80 + "px"; 
+  
 }
 
 new Vue({
