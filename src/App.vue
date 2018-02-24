@@ -68,7 +68,6 @@ export default {
 <style>
   @import url('./assets/css/html.css');
   @import url('./assets/css/vbtn.css');
-  /*@import url('./assets/css/phonebtn.css');*/
   #app{
     height: 100%;
     width: auto;
@@ -96,7 +95,7 @@ export default {
     width: 15rem;
     border-radius: 50%;
     border: 1px solid gray;
-    background-image: url('/static/img/1.jpg');
+    background-image: url('/static/1.jpg');
     background-size: 15rem 20rem;
   }
   footer{
