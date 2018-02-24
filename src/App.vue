@@ -96,7 +96,7 @@ export default {
     width: 15rem;
     border-radius: 50%;
     border: 1px solid gray;
-    /*background-image: url('./assets/1.jpg');*/
+    background-image: url('./assets/1.jpg');
     background-size: 15rem 20rem;
   }
   footer{
