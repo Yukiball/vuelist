@@ -1,4 +1,4 @@
-# vuelist
+# vuemenu
 
 > 用Vue-cli打造的菜单栏组件，使用了vue动画 、vuex进行兄弟组件之间的数据传输。
 ## 简介
